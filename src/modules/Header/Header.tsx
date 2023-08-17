@@ -6,7 +6,7 @@ import { StarIcon } from '../../components/icons/star'
 import { ProfileIcon } from '../../components/icons/profile'
 import { ShoppingIcon } from '../../components/icons/shopping'
 import { Link } from '../../components/ui/Link'
-import { Box } from '@mui/material'
+import {Box, IconButton} from '@mui/material'
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -22,10 +22,18 @@ const Header = () => {
           ))}
         </Box>
         <Box className={styles.icons}>
-          <SearchIcon />
-          <StarIcon />
-          <ProfileIcon />
-          <ShoppingIcon />
+          <IconButton>
+            <SearchIcon />
+          </IconButton>
+          <IconButton>
+            <StarIcon />
+          </IconButton>
+          <IconButton>
+            <ProfileIcon />
+          </IconButton>
+          <IconButton>
+            <ShoppingIcon />
+          </IconButton>
         </Box>
       </Box>
     </Box>

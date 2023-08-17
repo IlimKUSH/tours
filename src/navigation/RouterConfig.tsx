@@ -1,9 +1,9 @@
 import { Suspense, lazy } from 'react'
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 
 import * as PATH from './constants'
-import Main from '../pages/Main/Main'
-import { CATALOG } from './constants'
+import { Main } from '../pages/Main'
+import { Catalog } from '../pages/Catalog'
 
 function RouterConfig() {
   return (
@@ -11,7 +11,7 @@ function RouterConfig() {
       <Routes>
         <Route path={PATH.ROOT} element={<Outlet />}>
           <Route path={PATH.ROOT} element={<Main />} />
-          {/* <Route path={PATH.CATALOG} element={<Dashboard />} />*/}
+          <Route path={PATH.CATALOG} element={<Catalog />} />
         </Route>
       </Routes>
     </Suspense>
