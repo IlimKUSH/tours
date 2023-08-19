@@ -1,0 +1,132 @@
+
+.footer {
+    background-color: #121214;
+}
+
+.gridContainer {
+    padding: 45px 0px 45px 0px;
+  
+}
+
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+@mixin columnItemsGap {
+    display: flex;
+    flex-direction: column;  
+    gap: 9px;
+
+}
+@mixin columnTextStyle {
+    font-size: 15px;
+    color:#DCDCE0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+
+.columnGrid, .newsBox,.newsTextBox{
+    @include columnItemsGap
+   
+}
+    .columnHead {
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+  
+    .columnContent {
+        @include columnTextStyle
+
+       
+    }
+    .columnContentUnderline {
+        @include columnTextStyle;
+        text-decoration: underline;
+    }
+    .columnContentNumber {
+        font-size: 16px;
+        font-weight: 600;
+        color:#DCDCE0;
+        cursor: pointer;
+    }
+    .columnSubtitle {
+        font-size: 12px;
+        font-weight: 800;
+        color:#DCDCE0;
+        text-transform: uppercase;
+    }
+
+    .columnContentExtra {
+        font-size: 11px;
+        color: #707076;
+        line-height: 20px;   
+    } 
+   
+.footerBasement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerBasementText {
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color:#707076;
+    cursor: pointer;
+    }
+.iconsBox {
+    display: flex;
+    gap: 9px;
+}
+
+@media (max-width:900px) {
+    .newsBox {
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+// Footer for mobile devices styles
+
+.containerSmall {
+    // padding: 45px 0px 45px 0px;
+    @extend .gridContainer;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordionBox {
+    background-color: #121214;
+    margin-bottom : 2px
+}
+
+.accordionItems {
+    @include columnItemsGap
+}
+
+.iconsBoxSmall {
+    @include centered;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.textExtraBox, .newsBoxSmall{
+    @include centered;
+    flex-direction: column;
+}
+
+.newsBoxSmall {
+    margin-bottom: 15px;
+}
+
+.columnContentExtraSmall {
+    @extend .columnContentExtra;
+    margin-bottom: 19px;
+    text-align: center;
+}
