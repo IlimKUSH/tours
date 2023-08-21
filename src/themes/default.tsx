@@ -1,47 +1,47 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
     dark: {
-      main: '#121214',
+      main: "#121214",
     },
     white: {
-      main: '#fff',
+      main: "#fff",
     },
     secondary: {
-      main: '#49D0FF',
+      main: "#49D0FF",
     },
     text: {
-      primary: '#24334B',
+      primary: "#24334B",
     },
     info: {
-      main: '#24334B',
-      light: '#3F5984',
+      main: "#24334B",
+      light: "#3F5984",
     },
     grey: {
-      300: '#CDCDCD',
+      300: "#CDCDCD",
     },
   },
   typography: {
-    fontFamily: 'Merriweather, sans-serif',
+    fontFamily: "Merriweather, sans-serif",
     h1: {
-      fontSize: 'clamp(18px, 3vw, 51px)',
-      fontWeight: '900',
+      fontSize: "clamp(18px, 3vw, 51px)",
+      fontWeight: "900",
     },
     h2: {
-      fontSize: 'clamp(16px, 3vw, 31px)',
-      fontWeight: '900',
+      fontSize: "clamp(16px, 3vw, 31px)",
+      fontWeight: "900",
     },
     h3: {
-      fontSize: 'clamp(14px, 3vw, 23px)',
-      fontWeight: '700',
+      fontSize: "clamp(14px, 3vw, 23px)",
+      fontWeight: "700",
     },
     h4: {
-      fontSize: 'clamp(12px, 3vw, 19px)',
-      fontWeight: '600',
+      fontSize: "clamp(12px, 3vw, 19px)",
+      fontWeight: "600",
     },
     button: {
-      textTransform: 'none',
+      textTransform: "none",
     },
   },
   components: {
@@ -55,6 +55,6 @@ const theme = createTheme({
       `,
     },
   },
-})
+});
 
-export default theme
+export default theme;
