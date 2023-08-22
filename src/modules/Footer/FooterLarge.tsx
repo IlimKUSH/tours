@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { footerContentLarge } from "../../contstants/footer-items";
 import { FooterLogo } from "../../components/icons/footerLogo";
-import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite";
 import styles from "./Footer.module.scss";
 import { InputButton } from "../../components/icons/inputButton";
 
