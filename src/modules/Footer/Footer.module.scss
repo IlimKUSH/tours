@@ -1,4 +1,6 @@
 
+@import "../../themes/fonts.scss";
+
 .footer {
     background-color: #121214;
 }
@@ -21,6 +23,7 @@
 
 }
 @mixin columnTextStyle {
+    font-family: "RFDewi-Regular";
     font-size: 15px;
     color:#DCDCE0;
     font-weight: 400;

@@ -1,8 +1,9 @@
 import { Container, styled } from "@mui/material";
 import theme from "../../../themes/default";
 
-export const StyledContainer = styled(Container)({
+export const BannerContainer = styled(Container)({
   [theme.breakpoints.up("xl")]: {
-    maxWidth: "1354px",
+    maxWidth: "1541px",
+    padding: "0px",
   },
 });

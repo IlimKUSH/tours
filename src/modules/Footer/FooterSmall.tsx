@@ -1,11 +1,9 @@
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { IconButton, Box, TextField, InputAdornment } from "@mui/material";
-import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite";
 import { FooterLogo } from "../../components/icons/footerLogo";
 import { footerContentSmall } from "../../contstants/footer-items";
 import styles from "./Footer.module.scss";
