@@ -1,0 +1,111 @@
+.container {
+    background: linear-gradient(267.03deg, #0D99F8 0.94%, #21A0F8 5.36%, #54B5FF 27.35%, #0DBBF8 79%, #0DDBF8 97.53%);
+    position: relative;
+    border-radius: 7px;
+    padding: 98px 0px 84px 0px;
+    
+ 
+}
+
+.titleBox {
+    width: 42%;
+    margin-bottom: 19px;
+}
+
+.textMainBox {
+    width: 55%;
+    margin-bottom: 24px;
+    .textMain {
+        font-size: clamp(12px, 3vw,19px);
+        color: white
+    }
+    .imagePhone {
+        width: 40%;
+        height:auto;
+        position: absolute;
+        border: 1px solid red;
+        top: -20%;
+        right:2%
+       }
+}
+
+.textBox {
+    display: flex;
+    width: 57%;
+    border: 1px solid red;
+    gap: 7.5%;
+    margin-bottom: 41px;
+    .textFirst {    
+        padding-left: 100px;
+        position: relative;  
+        border: 1px solid red;
+        font-size: clamp(14px, 3vw,16px);
+        &::before {
+          content: '1';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 77px;
+          height: 77px;    
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          font-weight: bold;
+          border: 1px solid white;
+        
+        }
+    }
+    
+    .textSecond {
+        @extend .textFirst;  
+        &::before {
+          content: "2";
+        }
+      }
+}
+
+.button {
+    width: 21%;
+    padding: clamp(23px, 5vw, 27px) clamp(16px, 5vw, 20px);
+    text-transform: uppercase;
+}
+
+@media(max-width:1300px) {
+
+    .textMainBox {
+        display: flex;
+        width: 100%;
+        // margin-bottom: 24px;
+        .textMain {
+            font-size: clamp(12px, 3vw,19px);
+            width: 60%;           
+            border: 1px solid green;
+        }
+        .imagePhone {
+            width: 40%;
+            height:auto;
+            position: static;
+            border: 1px solid green;
+            margin-top: -300px;
+            
+           }
+    }
+    .textBox {
+        width: 100%;
+    }
+
+    .button {
+        width: 50%;
+    }
+   
+}
+  
+  
+  
+  
+  
+  

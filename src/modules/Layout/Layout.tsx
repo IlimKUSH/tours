@@ -11,7 +11,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Box component="main" className={styles.main}>
         {children}
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };

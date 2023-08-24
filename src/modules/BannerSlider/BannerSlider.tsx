@@ -31,10 +31,8 @@ const BannerSlider = () => {
     }
   };
 
-  console.log(window.innerWidth);
-
   return (
-    <BannerContainer>
+    <BannerContainer sx={{ border: "1px solid red" }}>
       <Slider {...settings} ref={sliderRef}>
         {bannerItems.map((slide, index) => (
           <Box key={index}>
