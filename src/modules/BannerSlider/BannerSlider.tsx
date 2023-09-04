@@ -6,6 +6,7 @@ import { bannerItems } from "../../contstants/banner-items";
 import BannerSlide from "../../components/ui/BannerSlide/BannerSlide";
 import { Box, useMediaQuery } from "@mui/material";
 import { BannerContainer } from "../../components/ui/Container/BannerContainer";
+import "./Slider.scss";
 
 const BannerSlider = () => {
   const sliderRef = React.useRef<Slider | null>(null);
@@ -34,20 +35,32 @@ const BannerSlider = () => {
   console.log(window.innerWidth);
 
   return (
-    <BannerContainer>
-      <Slider {...settings} ref={sliderRef}>
-        {bannerItems.map((slide, index) => (
-          <Box key={index}>
-            <BannerSlide
-              image={isSmallScreen ? slide.smallImage : slide.image}
-              title={slide.title}
-              text={slide.text}
-              handlePrevClick={handlePrevClick}
-              handleNextClick={handleNextClick}
-            />
-          </Box>
-        ))}
-      </Slider>
+    <BannerContainer maxWidth="xl">
+      <Box
+        sx={{
+          width: {
+            xl: "99.9%",
+            lg: "99.9%",
+            md: "99.9%",
+            sm: "99.9%",
+            xs: "98%",
+          },
+        }}
+      >
+        <Slider {...settings} ref={sliderRef}>
+          {bannerItems.map((slide, index) => (
+            <Box key={index}>
+              <BannerSlide
+                image={isSmallScreen ? slide.smallImage : slide.image}
+                title={slide.title}
+                text={slide.text}
+                handlePrevClick={handlePrevClick}
+                handleNextClick={handleNextClick}
+              />
+            </Box>
+          ))}
+        </Slider>
+      </Box>
     </BannerContainer>
   );
 };

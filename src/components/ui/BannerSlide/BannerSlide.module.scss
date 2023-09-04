@@ -3,47 +3,43 @@
     width: 100%;
     height: clamp(451px, 40vw, 631px);
     border-radius: 15px;
-   
-  }
-  
-  .backgroundImage {
+}
+
+.backgroundImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
     border-radius: 7px;
-  }
-  
-
-.bannerTitleBox {
-    padding-top:clamp(59px, 6vw, 98px ) ;
-    margin-bottom: 19px;
-    width: 35%;  
 }
 
-
+.bannerTitleBox {
+    padding-top: clamp(59px, 6vw, 98px);
+    margin-bottom: 19px;
+    width: 35%;
+}
 
 .bannerTextBox {
     width: clamp(40%, 5vw, 30%);
-    margin-bottom: 19px;   
+    margin-bottom: 19px;
 }
 
 .bannerText {
-    font-size: clamp(12px, 3vw,19px);
-    color: #121214 ;
+    font-size: clamp(12px, 3vw, 19px);
+    color: #121214;
 }
 
 .button {
-    padding:  clamp(15px, 3vw,23px);
+    padding: clamp(15px, 3vw, 23px);
     text-transform: uppercase;
     margin-bottom: 19px;
-    font-size: clamp(12px, 3vw,19px);
+    font-size: clamp(12px, 3vw, 19px);
 }
 
 .prevNextBox {

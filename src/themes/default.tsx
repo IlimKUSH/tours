@@ -10,7 +10,7 @@ const theme = createTheme({
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 1300,
+      xl: 1536,
     },
   },
   palette: {
@@ -38,7 +38,7 @@ const theme = createTheme({
     fontFamily: "RFDewi-Regular, sans-serif",
     h1: {
       fontFamily: "RFDewi-Black",
-      fontSize: "clamp(18px, 3vw, 51px)",
+      fontSize: "clamp(23px, 3vw, 51px)",
       fontWeight: "900",
       textTransform: "uppercase",
     },

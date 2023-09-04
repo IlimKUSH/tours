@@ -1,0 +1,95 @@
+.shopInfo {
+    background-color: #f4f5f6;
+    padding-top: 350px;
+    margin-top: -320px;
+}
+
+@mixin titleFontFamily {
+    font-family: "RFDewi-Black";
+    color: black;
+    text-transform: uppercase;
+}
+
+.titleTextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    .title {
+        @include titleFontFamily;
+        width: clamp(291px, 30vw, 539px);
+        font-size: clamp(19px, 3vw, 36px);
+    }
+
+    .text {
+        font-size: clamp(15px, 3vw, 16px);
+        width: clamp(320px, 40vw, 800px);
+    }
+    .text:last-child {
+        margin-bottom: 31px;
+    }
+}
+
+.squareBox {
+    background-color: white;
+    padding: 40px 40px 40px 53px;
+    max-width: 445px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.descriptionBox {
+    display: flex;
+    gap: 28.95px;
+    margin-bottom: 40px;
+}
+.descriptionBox:last-child {
+    margin-bottom: 0px;
+}
+
+.extraBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .extraTitle {
+        @include titleFontFamily;
+        width: 90%;
+        font-size: clamp(12px, 3vw, 13px);
+        line-height: 22px;
+    }
+
+    .extraText {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .titleTextBox {
+        .title {
+            @include titleFontFamily;
+            width: 100%;
+        }
+
+        .text {
+            width: 100%;
+        }
+    }
+    .squareBox {
+        max-width: 100%;
+        display: flex;
+        padding: 28px;
+    }
+    .descriptionBox {
+        flex-direction: column;
+        // border: 1px solid red;
+    }
+}
+@media (max-width: 600px) {
+    .squareBox {
+        flex-direction: column;
+    }
+    .descriptionBox {
+        flex-direction: row;
+        margin-bottom: 28px;
+    }
+}
