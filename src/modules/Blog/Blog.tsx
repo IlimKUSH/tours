@@ -9,7 +9,7 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import { Box, useMediaQuery } from '@mui/material'
+import { Box } from '@mui/material'
 import { StyledContainer } from '../../components/ui/Container/StyledContainer'
 import styles from './Blog.module.scss'
 
@@ -39,25 +39,13 @@ export default function Blog() {
       },
     ],
   }
-
-  //   const handlePrevClick = (): void => {
-  //     if (sliderRef.current) {
-  //       ;(sliderRef.current as Slider).slickPrev()
-  //     }
-  //   }
-
-  //   const handleNextClick = (): void => {
-  //     if (sliderRef.current) {
-  //       ;(sliderRef.current as Slider).slickNext()
-  //     }
-  //   }
-
-  console.log(window.innerWidth)
   return (
     <StyledContainer sx={{ mt: 15, mb: 15 }}>
       <Box className={styles.containerBlogHeader}>
-        <Typography variant='h2'>НАШ БЛОГ</Typography>
-        <Typography variant='h4' className={styles.textUnderline}>
+        <Typography variant='h1' component='h1'>
+          НАШ БЛОГ
+        </Typography>
+        <Typography variant='h4' component='h4' className={styles.textUnderline}>
           <span>БОЛЬШЕ СТАТЕЙ &gt; </span>
         </Typography>
       </Box>
@@ -71,17 +59,17 @@ export default function Blog() {
                 image={slide.image}
                 title={slide.title}
               />
-              <CardContent>
-                <Typography gutterBottom variant='h4' component='div'>
+              <CardContent sx={{ padding: 0 }}>
+                <Typography gutterBottom variant='h4' component='h4'>
                   {slide.title}
                 </Typography>
                 <Typography variant='body2' color='text.secondary'>
                   {slide.text}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions className={styles.CardActionBlog}>
                 <Button size='large'>Узнать подробнее</Button>
-                <Typography>{slide.date}</Typography>
+                <Typography className={styles.dateBlog}>{slide.date}</Typography>
               </CardActions>
             </Card>
           </Box>
