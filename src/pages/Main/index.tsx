@@ -1,7 +1,9 @@
-import React from 'react'
-import Layout from '../../modules/Layout/Layout'
-import BannerSlider from '../../modules/BannerSlider/BannerSlider'
-import Blog from '../../modules/Blog/Blog'
+
+import Layout from "../../modules/Layout/Layout";
+import BannerSlider from "../../modules/BannerSlider/BannerSlider";
+import BannerPrice from "../../modules/BannerPrice/BannerPrice";
+import ShopInfo from "../../modules/ShopInfo/ShopInfo";
+
 
 export const Main = () => {
   return (

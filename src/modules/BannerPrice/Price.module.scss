@@ -1,0 +1,148 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: linear-gradient(267.03deg, #0d99f8 0.94%, #21a0f8 5.36%, #54b5ff 27.35%, #0dbbf8 79%, #0ddbf8 97.53%);
+    position: relative;
+    border-radius: 7px;
+    padding: 98px 0px 84px 0px;
+}
+
+.titleBox {
+    width: 42%;
+    margin-bottom: 19px;
+}
+
+.textMainBox {
+    width: 55%;
+    margin-bottom: 24px;
+    .textMain {
+        font-size: clamp(12px, 3vw, 19px);
+        color: white;
+    }
+    .imagePhone {
+        // width: 25%;
+        height: auto;
+        position: absolute;
+        top: -8%;
+        right: 3.5%;
+    }
+}
+
+.textBox {
+    display: flex;
+    width: 57%;
+    gap: 7.5%;
+    margin-bottom: 41px;
+    .textFirst {
+        padding-left: 100px;
+        position: relative;
+        font-size: clamp(14px, 3vw, 16px);
+        &::before {
+            content: "1";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 77px;
+            height: 77px;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+    }
+
+    .textSecond {
+        @extend .textFirst;
+        &::before {
+            content: "2";
+        }
+    }
+}
+
+.button {
+    padding: clamp(23px, 5vw, 27px) clamp(16px, 5vw, 20px);
+    text-transform: uppercase;
+    font-size: clamp(12px, 3vw, 19px);
+}
+
+@media (max-width: 1200px) {
+    .textMainBox {
+        display: flex;
+        width: 100%;
+        // margin-bottom: 24px;
+        .textMain {
+            font-size: clamp(12px, 3vw, 19px);
+            width: 60%;
+        }
+        .imagePhone {
+            width: 300px;
+            height: fit-content;
+            position: sticky;
+            margin-top: -22%;
+        }
+    }
+
+    .textBox {
+        width: 100%;
+        .textFirst {
+            &::before {
+                width: 62px;
+                height: 62px;
+            }
+        }
+
+        .textSecond {
+            @extend .textFirst;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 36px 0px 42px 0px;
+    }
+
+    .textMainBox {
+        .imagePhone {
+            width: 30%;
+            margin-top: -20%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .titleBox {
+        @include center;
+        width: 100%;
+        // border: 1px solid red;
+    }
+    .textMainBox {
+        .textMain {
+            text-align: center;
+        }
+        .imagePhone {
+            display: none;
+        }
+    }
+    .textMainBox {
+        @include center;
+        .textMain {
+            width: 100%;
+        }
+    }
+    .textBox {
+        flex-direction: column;
+        gap: 19px;
+    }
+    .buttonBox {
+        @include center;
+    }
+}
