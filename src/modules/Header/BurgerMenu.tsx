@@ -8,6 +8,10 @@ import styles from "./Header.module.scss";
 const BurgerMenu = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
+  const handleOpen: () => void = () => {
+    setOpenDrawer(!openDrawer);
+  };
+
   return (
     <Box>
       {["left"].map((anchor) => (
@@ -34,7 +38,7 @@ const BurgerMenu = () => {
               </ListItemButton>
             </List>
           </Drawer>
-          <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
+          <IconButton onClick={handleOpen}>
             <DragHandleIcon sx={{ fill: "white", fontSize: "35px" }} />
           </IconButton>
         </React.Fragment>

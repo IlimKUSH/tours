@@ -48,7 +48,7 @@ const Header = () => {
                   </Box>
 
                   {submenu && submenu.length > 0 && (
-                    <ul className={styles.submenu}>
+                    <Box className={styles.submenu}>
                       {submenu.map((subItem, subIndex) => (
                         <MenuItem key={subIndex} className={styles.submenuItem}>
                           <Link
@@ -59,7 +59,7 @@ const Header = () => {
                           </Link>
                         </MenuItem>
                       ))}
-                    </ul>
+                    </Box>
                   )}
                 </Box>
               ))}

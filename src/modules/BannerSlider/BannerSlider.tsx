@@ -32,8 +32,6 @@ const BannerSlider = () => {
     }
   };
 
-  console.log(window.innerWidth);
-
   return (
     <BannerContainer maxWidth="xl">
       <Box
