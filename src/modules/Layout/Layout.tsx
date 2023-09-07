@@ -8,8 +8,10 @@ import Footer from "../Footer/Footer";
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <Box>
+
       {/* <Header /> */}
       <Box component='main' className={styles.main}>
+
         {children}
       </Box>
       <Footer />

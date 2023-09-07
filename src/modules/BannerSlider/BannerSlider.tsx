@@ -1,4 +1,3 @@
-
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,8 +9,8 @@ import { BannerContainer } from "../../components/ui/Container/BannerContainer";
 import "./Slider.scss";
 
 const BannerSlider = () => {
-  const sliderRef = React.useRef<Slider | null>(null)
-  const isSmallScreen: boolean = useMediaQuery('(max-width:500px)')
+  const sliderRef = React.useRef<Slider | null>(null);
+  const isSmallScreen: boolean = useMediaQuery("(max-width:500px)");
 
   const settings = {
     dots: false,
@@ -19,21 +18,19 @@ const BannerSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  }
+  };
 
   const handlePrevClick = (): void => {
     if (sliderRef.current) {
-      ;(sliderRef.current as Slider).slickPrev()
+      (sliderRef.current as Slider).slickPrev();
     }
-  }
+  };
 
   const handleNextClick = (): void => {
     if (sliderRef.current) {
-      ;(sliderRef.current as Slider).slickNext()
+      (sliderRef.current as Slider).slickNext();
     }
-  }
-
-  console.log(window.innerWidth)
+  };
 
   return (
     <BannerContainer maxWidth="xl">
@@ -63,7 +60,7 @@ const BannerSlider = () => {
         </Slider>
       </Box>
     </BannerContainer>
-  )
-}
+  );
+};
 
-export default BannerSlider
+export default BannerSlider;
