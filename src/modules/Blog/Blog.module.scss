@@ -1,0 +1,35 @@
+@import '../../themes/fonts.scss';
+.containerBlogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.containerSlider {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.textUnderline {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.cardBlog {
+  max-width: 433px;
+  max-height: 445px;
+  margin-right: 20px;
+  box-shadow: none;
+}
+.CardActionBlog {
+  padding: 0;
+  justify-content: space-between;
+  Button {
+    padding-left: 0;
+    font-size: 16px;
+    color: black;
+    font-family: 'RFDewi-Black';
+  }
+  .dateBlog {
+    color: #8c8f96;
+  }
+}
